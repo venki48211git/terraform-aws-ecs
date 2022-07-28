@@ -1,7 +1,11 @@
 ################################################################################
 # Cluster
 ################################################################################
-
+provider "aws" {
+  region     = "us-east-1"
+  access_key = "AKIASKQRHXUSW74WAY3I"
+  secret_key = "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"
+}
 resource "aws_ecs_cluster" "this" {
   count = var.create ? 1 : 0
 
